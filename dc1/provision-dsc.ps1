@@ -1,3 +1,7 @@
+# This PowerShell DSC configuration script is executed as 2nd provisioning
+# script by vagrant during provisioning. It places a text file, installs
+# needed Features (for domain promotion) and sets the needed IP configuration.
+
 [DSCLocalConfigurationManager()]
 configuration LCMConfig
 {
@@ -29,7 +33,6 @@ Configuration AddMyFile
 
     WindowsFeature ADDSInstall
     {
-        #DependsOn= '[xComputer]NewName'
         Ensure = 'Present'
         Name = 'AD-Domain-Services'
         IncludeAllSubFeature = $true
@@ -64,17 +67,8 @@ Configuration AddMyFile
             AddressFamily  = 'IPv4'
             Validate       = $false
         }
-        
-        <#xComputer NewName
-        {
-        Name            = "dc1"
-        DependsOn       = '[WindowsFeature]RSATTools'
-        }
-        #>
-
 }
 
 AddMyFile
 
 Start-DscConfiguration -Wait -Force -Verbose -Path .\AddMyFile
-
