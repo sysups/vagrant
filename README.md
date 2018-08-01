@@ -11,10 +11,10 @@ then going through this project will give you some nice pointers about the subje
 This vagrant project enables you to **nearly** "zero-touch" install a small lab environment
 consisting of a domain called lab.pri which contains three VMs:
 
-| VM Name | Operating System | Role | Trial license |
-| dc1 | Windows Server 2016 standard | Domain Controller | 180 days |
-| server1 | Windows Server 2016 standard | Member Server | 180 days |
-| win1 | Windows 10 Enterprise | Workstation | 90 days |
+VM Name | Operating System | Role | Trial license
+dc1 | Windows Server 2016 standard | Domain Controller | 180 days
+server1 | Windows Server 2016 standard | Member Server | 180 days
+win1 | Windows 10 Enterprise | Workstation | 90 days
 
 This is a quickstart and no extensive documentation of how Vagrant works. If you want to
 know the details of the configuration, then please invest in reading the documentation:
