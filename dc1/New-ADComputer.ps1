@@ -1,0 +1,2 @@
+New-ADComputer -Name "server1" -AccountPassword (ConvertTo-SecureString -String 'TempJoinPA$$' -AsPlainText -Force)
+New-ADComputer -Name "win1" -AccountPassword (ConvertTo-SecureString -String 'TempJoinPA$$' -AsPlainText -Force)
